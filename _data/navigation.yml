@@ -1,0 +1,6 @@
+- name: Home
+  link: /
+- name: Articles
+  link: /articles/
+- name: Talks
+  link: /talks/

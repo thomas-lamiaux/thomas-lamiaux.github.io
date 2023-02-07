@@ -1,0 +1,20 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <!-- Get and print the site title  -->
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+    {%- if site.data.navigation.size > 0 -%}
+      <nav class="site-nav">
+          {%- for item in site.data.navigation -%}
+            <a class="page-link" href="{{ item.link | relative_url }}"
+              {% if page.url == item.link %}
+                style="font-weight: bold;"
+              {%- endif -%}>
+              {{ item.name | escape }}
+            </a>
+          {%- endfor -%}
+      </nav>
+    {%- endif -%}
+  </div>
+</header>
