@@ -217,10 +217,10 @@ table td {
  * Site header
  */
 .site-header {
-  border-top: 10px solid #757575;
-  border-bottom: 1.5px solid black;
+  border-top: 10px solid #fdfdfd;
+  border-bottom: 1px solid black;
   min-height: 60px;
-  background-color: #757575;
+  background-color: #fdfdfd;
   position: relative;
 }
 
