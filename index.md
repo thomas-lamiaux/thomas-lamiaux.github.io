@@ -12,5 +12,3 @@ My main interests are :
 - Proof Assistants
 - Functional Programming Languages
 - Categorical Semantics
-
-email : firstname.lastname@ens-paris-saclay.fr

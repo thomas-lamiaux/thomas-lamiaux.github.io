@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hello
-permalink: /hello1/
+title: Contact
+permalink: /contact/
 ---
 
 in construction

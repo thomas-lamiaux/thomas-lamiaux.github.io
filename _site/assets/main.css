@@ -280,7 +280,7 @@ table td {
   line-height: 1.5;
 }
 .site-nav .page-link:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 22px;
 }
 @media screen and (max-width: 600px) {
   .site-nav {
