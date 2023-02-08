@@ -13,17 +13,17 @@ $spacing-unit:     30px !default;
 // $text-color:
 
 $text-color:       white !default;
-$background-color: rgb(24 ,26 ,27) !default;
-$box-background:   #383838 !default;
+$background-color: rgba(24, 26, 27, 0.95) !default;
+$box-background:   #51514d !default;
 $line-color:       rgb(140, 130, 115) !default;
-$brand-color:      #2a7ae2 !default;
+$brand-color:      rgb(90, 209, 249) !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 5%) !default;
 
-// $header-background: rgb(18, 118, 175) !default;
-$header-background: #00337C !default;
+// $header-background: #3083DC !default; // Bleu de France
+$header-background: #247ede !default;
 $header-bottom: black !default;
 
 $table-text-align: left !default;
