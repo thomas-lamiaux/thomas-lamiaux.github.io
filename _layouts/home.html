@@ -15,17 +15,17 @@ layout: default
   <h1> News </h1>
   <div class="page-title-line"></div>
 
-  {%- for item in site.data.news -%}
-    <div class="box">
-      <h3 style="font-weight: 500;"> {{ item.name }} </h3>
-      <p style="text-align: justify;"> {{ item.description }} </p>
-    </div>
-  {%- endfor -%}
 
-  <!-- Section News
-  <div class="empty" style="--height: 25px"></div>
-  <h1> Contact </h1>
-  <div class="page-title-line"></div>
-
-  <p> In construction </p> -->
+  {%- if site.news.size > 0 -%}
+    {% assign filtered_news = site.news | sort: "date" | "reverse" %}
+    {%- for item in filtered_news -%}
+      <div class="box">
+        <h3 style="font-weight: 500"> {{ item.category }}: {{ item.title }} </h3>
+        {{ item.date | date: "%B, %Y"}}
+        <div style="text-align: justify;">
+          {{ item.content | markdownify }}
+        </div>
+      </div>
+    {%- endfor -%}
+  {%- endif -%}
 </div>
