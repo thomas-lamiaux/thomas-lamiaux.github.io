@@ -7,7 +7,7 @@
 - name: Distinguished Paper at CPP 2023
   date: 2023 January
   description:
-    Our paper <a href="https://staff.math.su.se/anders.mortberg/">Computing Cohomology Rings in Cubical Agda</a>
+    Our paper <a href="https://arxiv.org/abs/2212.04182">Computing Cohomology Rings in Cubical Agda</a>
     with Axel Ljungström and <a href="https://staff.math.su.se/anders.mortberg/">Anders Mörtberg</a>,
     was accepted at <a href="https://popl23.sigplan.org/home/CPP-2023#">CPP 2023</a> and awarded
     <b> Distinguished Paper </b>.
