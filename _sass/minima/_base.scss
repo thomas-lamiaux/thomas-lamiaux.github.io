@@ -57,6 +57,7 @@ main {
 img {
   max-width: 100%;
   vertical-align: middle;
+  float: left;
 }
 
 
@@ -251,4 +252,13 @@ table {
   td {
     border: 1px solid $grey-color-light;
   }
+}
+
+
+/**
+ * Empty Block
+ */
+
+.empty {
+  height: var(--height);
 }

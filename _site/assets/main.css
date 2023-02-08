@@ -49,6 +49,7 @@ main {
 img {
   max-width: 100%;
   vertical-align: middle;
+  float: left;
 }
 
 /**
@@ -214,13 +215,20 @@ table td {
 }
 
 /**
+ * Empty Block
+ */
+.empty {
+  height: var(--height);
+}
+
+/**
  * Site header
  */
 .site-header {
-  border-top: 10px solid #fdfdfd;
+  border-top: 25px solid #828282;
   border-bottom: 1px solid black;
   min-height: 60px;
-  background-color: #fdfdfd;
+  background-color: #828282;
   position: relative;
 }
 
@@ -239,7 +247,7 @@ table td {
   width: 280px;
   height: 1px;
   border-bottom: 1px solid black;
-  position: absolute;
+  position: top;
 }
 
 .site-nav {
@@ -306,6 +314,25 @@ table td {
   .site-nav .page-link:not(:last-child) {
     margin-right: 0;
   }
+}
+
+.page-title-line {
+  margin-top: -10px;
+  margin-bottom: 20px;
+  border-top: 1px solid black;
+  width: 280px;
+}
+
+/**
+ * Home page
+ */
+.home-block {
+  margin-left: 280px;
+  margin-right: 0px;
+  border-left: 20px solid white;
+  height: 350px;
+  width: 450px;
+  text-align: justify;
 }
 
 /**
