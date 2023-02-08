@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Internships
-permalink: /internships/
+title: Resume
+permalink: /resume/
 ---
 
 in construction
