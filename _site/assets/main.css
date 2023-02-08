@@ -147,8 +147,8 @@ pre > code {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - (30px * 2));
+  max-width: -webkit-calc(850px - (30px * 2));
+  max-width: calc(850px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
@@ -156,8 +156,8 @@ pre > code {
 }
 @media screen and (max-width: 800px) {
   .wrapper {
-    max-width: -webkit-calc(800px - (30px));
-    max-width: calc(800px - (30px));
+    max-width: -webkit-calc(850px - (30px));
+    max-width: calc(850px - (30px));
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -244,7 +244,7 @@ table td {
 }
 
 .site-line {
-  width: 280px;
+  width: 286px;
   height: 1px;
   border-bottom: 1px solid black;
   position: top;
@@ -318,18 +318,18 @@ table td {
 
 .page-title-line {
   margin-top: -10px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-top: 1px solid black;
-  width: 280px;
+  width: 286px;
 }
 
 /**
  * Home page
  */
 .home-block {
-  margin-left: 280px;
+  margin-left: 286px;
   margin-right: 0px;
-  border-left: 20px solid white;
+  border-left: 25px solid white;
   height: 350px;
   width: 450px;
   text-align: justify;
