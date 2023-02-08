@@ -3,7 +3,7 @@
  */
 .site-header {
   border-top: 25px solid $header-background;
-  border-bottom: 1px solid $header-bottom;
+  border-bottom: 1px solid $line-color;
   min-height: $spacing-unit * 2;
   background-color: $header-background;
 
@@ -20,14 +20,14 @@
 
   &,
   &:visited {
-    color: $header-textcolor;
+    color: $text-color;
   }
 }
 
 .site-line{
   width: 286px;
   height: 1px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $line-color;
   position: top;
   }
 
@@ -45,7 +45,7 @@
   .page-link {
     @include relative-font-size(1.25);
     font-weight: 300;
-    color: $header-textcolor;
+    color: $text-color;
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
@@ -111,7 +111,7 @@
 .page-title-line {
   margin-top: -10px;
   margin-bottom: 25px;
-  border-top: 1px solid black;
+  border-top: 1px solid $text-color;
   width: 286px;
 }
 
@@ -122,16 +122,11 @@
 .home-block {
   margin-left: 286px;
   margin-right: 0px;
-  border-left: 25px solid white;
+  padding-left: 25px;
   height: 350px;
   width: 450px;
   text-align: justify;
 }
-
-// .home-description {
-//   f;
-// }
-
 
 /**
  * Page content

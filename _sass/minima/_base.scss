@@ -262,3 +262,19 @@ table {
 .empty {
   height: var(--height);
 }
+
+/**
+ * Black Box
+ */
+
+.box {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid $line-color;
+  border-radius: 5px;
+  width: 800px;
+  background-color: $box-background;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

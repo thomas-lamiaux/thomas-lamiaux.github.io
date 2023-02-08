@@ -4,12 +4,20 @@ layout: default
 
 <div class="home">
 
+  <!-- Picture -->
   <img src="assets/images/profile-picture.JPG" style="width: 286px">
   <div class="home-block">
       {{ content }}
   </div>
 
+  <!-- Section News -->
   <div class="empty" style="--height: 25px"></div>
   <h1> News </h1>
   <div class="page-title-line"></div>
-  <p> in construction </p>
+
+  {%- for item in site.data.news -%}
+    <div class="box">
+      <h3 style="font-weight: 500;"> {{ item.name }} </h3>
+      <p style="text-align: justify;"> {{ item.description }} </p>
+    </div>
+  {%- endfor -%}
