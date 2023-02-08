@@ -16,9 +16,11 @@ layout: default
   <div class="page-title-line"></div>
 
 
-  {%- if site.news.size > 0 -%}
-    {% assign filtered_news = site.news | sort: "date" | "reverse" %}
-    {%- for item in filtered_news -%}
+  {% assign filtered_news = site.news | sort: "date" | "reverse" %}
+  {%- for item in filtered_news -%}
+    {%- assign year = item.date | date : "%Y" -%}
+    {%- assign month = item.date | date : "%m" -%}
+    {%- if year >= "2023" and month >= "01" -%}
       <div class="box">
         <h3 style="font-weight: 500"> {{ item.category }}: {{ item.title }} </h3>
         {{ item.date | date: "%B, %Y"}}
@@ -26,6 +28,6 @@ layout: default
           {{ item.content | markdownify }}
         </div>
       </div>
-    {%- endfor -%}
-  {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
 </div>

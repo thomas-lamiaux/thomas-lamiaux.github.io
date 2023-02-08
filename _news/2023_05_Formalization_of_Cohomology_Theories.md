@@ -1,6 +1,6 @@
 ---
-category: Workshop
-title: Formalization of Cohomology Theories
+category: Talk
+title: Workshop Formalization of Cohomology Theories
 date: 2023-05-21
 ---
 
