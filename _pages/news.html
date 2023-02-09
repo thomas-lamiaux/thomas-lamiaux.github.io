@@ -6,37 +6,41 @@ permalink: /news/
 
 <h1 class="section"> News </h1>
 
-{% assign filtered_news = site.news | sort: "date" | "reverse" %}
+{% assign sort_news = site.news | sort: "date" | "reverse" %}
 
-{%- for item in filtered_news -%}
+{%- for item in sort_news -%}
   {%- assign year = item.date | date : "%Y" -%}
   {%- assign month = item.date | date : "%m" -%}
   {%- if year >= "2023" and month >= "01" -%}
     <div class="box">
-      <h3 style="font-weight: 500"> {{ item.category }}: {{ item.title }} </h3>
-      {{ item.date | date: "%B, %Y"}}
-      <div style="text-align: justify;">
-        {{ item.content | markdownify }}
+      <div>
+        <span class="box-title"> {{ item.title }} </span>
+        {%- if item.spec -%}
+          <span class="note-box"> {{ item.spec }} </span>
+        {%- endif -%}
       </div>
+      <div class="box-data"> {{ item.category }}, {{ item.date | date: "%B, %Y"}} </div>
+      <div style="text-align: justify;"> {{ item.content | markdownify }} </div>
     </div>
   {%- endif -%}
 {%- endfor -%}
 
 <!-- Past News -->
-<div class="empty" style="--height: 25px"></div>
-<h1> Past News </h1>
-<div class="page-title-line"></div>
+<h1 class="section"> Past News </h1>
 
-{%- for item in filtered_news -%}
+{%- for item in sort_news -%}
   {%- assign year = item.date | date : "%Y" -%}
   {%- assign month = item.date | date : "%m" -%}
   {%- if year < "2023" or month < "01" -%}
     <div class="box">
-      <h3 style="font-weight: 500"> {{ item.category }}: {{ item.title }} </h3>
-      {{ item.date | date: "%B, %Y"}}
-      <div style="text-align: justify;">
-        {{ item.content | markdownify }}
+      <div>
+        <span class="box-title"> {{ item.title }} </span>
+        {%- if item.spec -%}
+          <span class="note-box"> {{ item.spec }} </span>
+        {%- endif -%}
       </div>
+      <div class="box-data"> {{ item.category }}, {{ item.date | date: "%B, %Y"}} </div>
+      <div style="text-align: justify;"> {{ item.content | markdownify }} </div>
     </div>
   {%- endif -%}
 {%- endfor -%}
