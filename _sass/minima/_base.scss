@@ -259,15 +259,19 @@ table {
  * Section Block
  */
 
+.section{
+  margin-top: var(--margin-top) ;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $text-color;
+  margin-bottom: 25px;
+  width: 286px;
+}
+
 .page-title-line {
   margin-top: -10px;
   margin-bottom: 25px;
   border-top: 1px solid $text-color;
   width: 286px;
-}
-
-.empty {
-  height: var(--height);
 }
 
 /**

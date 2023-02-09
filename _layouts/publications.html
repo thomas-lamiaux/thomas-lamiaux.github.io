@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article>
+
+  <h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
+  <div>
+    <a href="{{ page.author1.link | relative_url }}">{{ page.author1.name | escape }}</a>,
+    <a href="{{ page.author2.link | relative_url }}">{{ page.author2.name | escape }}</a>,
+    <a href="{{ page.author3.link | relative_url }}">{{ page.author3.name | escape }}</a>
+  </div>
+  <div>
+    <a href="{{ page.venue.link | relative_url }}">{{ page.venue.name | escape }}</a>
+  </div>
+  <div style="text-align: justify;">
+    {{ content | markdownify }}
+  </div>
+
+</article>

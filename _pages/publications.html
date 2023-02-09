@@ -1,0 +1,26 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+
+<h1 class="section"> Publications </h1>
+
+{% assign sort_pub = site.publications | sort: "date" | "reverse" %}
+
+{%- for item in sort_pub -%}
+  <div class="box">
+      <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+      <div>
+        <a href="{{ item.author1.link | relative_url }}">{{ item.author1.name | escape }}</a>,
+        <a href="{{ item.author2.link | relative_url }}">{{ item.author2.name | escape }}</a>,
+        <a href="{{ item.author3.link | relative_url }}">{{ item.author3.name | escape }}</a>
+      </div>
+      <div>
+        <a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev | escape }}</a>
+      </div>
+      <div style="text-align: justify;">
+        {{ item.content | markdownify }}
+      </div>
+  </div>
+{%- endfor -%}

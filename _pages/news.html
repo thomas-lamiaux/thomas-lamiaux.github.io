@@ -4,6 +4,8 @@ title: News
 permalink: /news/
 ---
 
+<h1 class="section"> News </h1>
+
 {% assign filtered_news = site.news | sort: "date" | "reverse" %}
 
 {%- for item in filtered_news -%}

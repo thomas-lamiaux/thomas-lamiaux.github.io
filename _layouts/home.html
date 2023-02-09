@@ -4,6 +4,8 @@ layout: default
 
 <div class="home">
 
+  <h1 class="section"> Home </h1>
+
   <!-- Picture -->
   <img src="assets/images/profile-picture.JPG" style="width: 286px">
   <div class="home-block">
@@ -11,9 +13,10 @@ layout: default
   </div>
 
   <!-- Section News -->
-  <div class="empty" style="--height: 25px"></div>
+  <!-- <div class="empty" style="--height: 25px"></div>
   <h1> News </h1>
-  <div class="page-title-line"></div>
+  <div class="page-title-line"></div> -->
+  <h1 class="section" style="--margin-top: 25px"> News </h1>
 
 
   {% assign filtered_news = site.news | sort: "date" | "reverse" %}

@@ -31,6 +31,16 @@ github_username:  thomas-lamiaux
 # Build settings
 collections:
   news:
+  publications:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publications"
+
 include: ['_pages']
 theme: minima
 plugins:
