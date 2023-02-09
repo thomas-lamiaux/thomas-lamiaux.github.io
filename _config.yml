@@ -33,11 +33,18 @@ collections:
   news:
   publications:
     output: true
+  talks:
+    output:true
 
 defaults:
   - scope:
       path: ""
       type: "publications"
+    values:
+      layout: "publications"
+  - scope:
+      path: ""
+      type: "talks"
     values:
       layout: "publications"
 

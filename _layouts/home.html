@@ -21,15 +21,25 @@ layout: default
     {%- assign month = item.date | date : "%m" -%}
     {%- if year >= "2023" and month >= "01" -%}
       <div class="box">
-        <div>
-          <!-- <span class="box-cat"> {{ item.category }}: </span> -->
-          <span class="box-title"> {{ item.title }} </span>
+
+        <!-- print title -->
+        <div class="box-title"> {{ item.title }} </div>
+
+        <!-- print venue and spec -->
+        <div class="box-data">
           {%- if item.spec -%}
-            <span class="note-box"> {{ item.spec }} </span>
+              <div class="empty" style="--size: 5px";> try </div>
+              <span class="note-box"> {{ item.spec }} </span>
+          {%- endif -%}
+          <span class="box-data"> {{ item.category }}, {{ item.date | date: "%B, %Y"}} </span>
+          {%- if item.spec -%}
+            <div class="empty" style="--size: 7px";></div>
           {%- endif -%}
         </div>
-        <div class="box-data"> {{ item.category }}, {{ item.date | date: "%B, %Y"}} </div>
+
+        <!-- print text -->
         <div style="text-align: justify;"> {{ item.content | markdownify }} </div>
+
       </div>
     {%- endif -%}
   {%- endfor -%}

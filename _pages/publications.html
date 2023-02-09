@@ -16,24 +16,43 @@ permalink: /publications/
   <!-- Print the good ones -->
   {%- for item in sort_pub -%}
     {%- assign year = item.date | date : "%Y" -%}
+    <!-- TO FIX !!! -->
     {%- if year == '2023' -%}
       <div class="box" style="--bot: 15px">
-          <div>
-            <span class="box-title-article">
-              <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
-            </span>
+
+          <!-- print title -->
+          <div class="box-title-article">
+            <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+          </div>
+
+          <!-- print authors -->
+          <div class="box-data">
+            {%- for author in item.authors -%}
+              {%- if author.link -%}
+                <a href="{{ author.link | relative_url }}">{{ author.name | escape }} </a>
+              {%- else -%}
+                <span>{{ author.name }} </span>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+
+          <!-- print venue and spec -->
+          <div class="box-data">
             {%- if item.spec -%}
+                <div class="empty" style="--size: 5px";> try </div>
                 <span class="note-box"> {{ item.spec }} </span>
             {%- endif -%}
+            <span><a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev | escape }}</a></span>
+            {%- if item.spec -%}
+              <div class="empty" style="--size: 7px";></div>
+            {%- endif -%}
           </div>
-          <div class="box-data">
-            <a href="{{ item.author1.link | relative_url }}">{{ item.author1.name | escape }}</a>,
-            <a href="{{ item.author2.link | relative_url }}">{{ item.author2.name | escape }}</a>,
-            <a href="{{ item.author3.link | relative_url }}">{{ item.author3.name | escape }}</a>
-          </div>
-          <div class="box-data">
-            <a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev | escape }}</a>
-          </div>
+
+          <!-- print description -->
+          {%- if item.short-description -%}
+            <div style="text-align: justify;"> {{ item.short-description }} </div>
+          {%- endif -%}
+
       </div>
     {%- endif -%}
   {%- endfor -%}

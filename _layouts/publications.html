@@ -2,16 +2,29 @@
 layout: default
 ---
 <article>
-
-  <h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
-  <div>
-    <a href="{{ page.author1.link | relative_url }}">{{ page.author1.name | escape }}</a>,
-    <a href="{{ page.author2.link | relative_url }}">{{ page.author2.name | escape }}</a>,
-    <a href="{{ page.author3.link | relative_url }}">{{ page.author3.name | escape }}</a>
+  <!-- print title section -->
+  <div class="section-pub">
+    <!-- print title -->
+    <div class="box-title-pub"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></div>
+    <!-- print authors  -->
+    <div class="box-data">
+      {%- if page.authors.size > 0 -%}
+        {%- for author in page.authors -%}
+          {%- if author.link -%}
+            <a href="{{ author.link | relative_url }}">{{ author.name | escape }} </a>
+          {%- else -%}
+            <span>{{ author.name }} </span>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+    <!-- print venue -->
+    <div>
+      <a href="{{ page.venue.link | relative_url }}">{{ page.venue.name | escape }}</a>
+    </div>
   </div>
-  <div>
-    <a href="{{ page.venue.link | relative_url }}">{{ page.venue.name | escape }}</a>
-  </div>
+  <!-- print abstract -->
+  <h3> Abstract : </h3>
   <div style="text-align: justify;">
     {{ content | markdownify }}
   </div>

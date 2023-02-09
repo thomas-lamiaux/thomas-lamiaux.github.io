@@ -274,6 +274,14 @@ table {
   width: 286px;
 }
 
+.section-pub{
+  margin-top: 20px ;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $text-color;
+  margin-bottom: 15px;
+  width: 790px;
+}
+
 /**
  * Black Box
  */
@@ -309,13 +317,32 @@ table {
 .note-box {
   border: 1.5px solid rgba(24, 26, 27, 0.95);
   border-radius: 5px;
-  margin-left: 10px;
-  padding: 3px;
-  // background-color: rgb(141, 32, 139);
-  background-color: $header-background;
-  @include relative-font-size(1.15)
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgb(141, 32, 139);
+  @include relative-font-size(1)
 }
 
+.box-line{
+  margin-top: 7px;
+  border-bottom: 1px solid $text-color;
+  margin-bottom: 7px;
+}
+
+.box-title-pub{
+  @include relative-font-size(1.8);
+  font-weight: 500;
+}
+
+.empty{
+  height: var(--size);
+}
 
 /**
  * List Sep
