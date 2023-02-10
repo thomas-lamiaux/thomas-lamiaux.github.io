@@ -1,8 +1,10 @@
 ---
-layout: page
+layout: default
 title: Contact
 permalink: /contact/
 ---
+
+<h1 class="section"> Contact </h1>
 
 I am joinable at the email below
 

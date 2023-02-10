@@ -2,7 +2,13 @@
 layout: default
 ---
 
-<h1 class="section"> {{ page.title }} </h1>
+<div class="section-pub">
+  <!-- print title -->
+  <div class="box-title-pub"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></div>
+
+  <div class="box-data"> {{ page.institute }} </div>
+  <div class="box-data"> {{ page.date | date: "%B, %Y"}} - {{ page.date2 | date: "%B, %Y"}} </div>
+</div>
 
 {{ content }}
 

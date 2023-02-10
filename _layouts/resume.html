@@ -8,8 +8,30 @@ layout: default
 
 <h1 class="section"> Research Internship </h1>
 
-todo
+{%- assign internship = site.resume | where: "category", "Research_Internship" -%}
+{%- assign filtered_internship = internship | short: "date" | "reverse" -%}
+{%- for item in filtered_internship -%}
+  <div class="box">
+    <div class="box-title-article">
+      <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+    </div>
+    <div class="box-data"> {{ item.institute }} </div>
+    <div class="box-data"> {{ item.date | date: "%B, %Y"}} - {{ item.date2 | date: "%B, %Y"}}  </div>
+    <div> {{ item.short-description | markdownify }} </div>
+  </div>
+{%- endfor -%}
 
 <h1 class="section"> Education </h1>
 
-todo
+{%- assign education = site.resume | where: "category", "Education" -%}
+{%- assign filtered_education = education | short: "date" | "reverse" -%}
+{%- for item in filtered_education -%}
+  <div class="box">
+    <div class="box-title-article">
+      <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+    </div>
+    <div class="box-data"> {{ item.institute }} </div>
+    <div class="box-data"> {{ item.date | date: "%B, %Y"}} - {{ item.date2 | date: "%B, %Y"}}  </div>
+    <div> {{ item.short-description | markdownify }} </div>
+  </div>
+{%- endfor -%}
