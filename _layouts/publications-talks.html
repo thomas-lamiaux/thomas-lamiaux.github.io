@@ -1,11 +1,15 @@
 ---
 layout: default
 ---
+
 <article>
+
   <!-- print title section -->
   <div class="section-pub">
+
     <!-- print title -->
     <div class="box-title-pub"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></div>
+
     <!-- print authors  -->
     <div class="box-data">
       {%- if page.authors.size > 0 -%}
@@ -18,11 +22,14 @@ layout: default
         {%- endfor -%}
       {%- endif -%}
     </div>
+
     <!-- print venue -->
     <div>
       <a href="{{ page.venue.link | relative_url }}">{{ page.venue.name | escape }}</a>
     </div>
+
   </div>
+
   <!-- print abstract -->
   <h3> Abstract : </h3>
   <div style="text-align: justify;">

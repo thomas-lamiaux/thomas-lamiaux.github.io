@@ -34,19 +34,26 @@ collections:
   publications:
     output: true
   talks:
-    output:true
+    output: true
+  resume:
+    output: true
 
 defaults:
   - scope:
       path: ""
-      type: "publications"
+      type: "publications-talks"
     values:
-      layout: "publications"
+      layout: "publications-talks"
   - scope:
       path: ""
       type: "talks"
     values:
       layout: "publications"
+  - scope:
+      path: ""
+      type: "resume"
+    values:
+      layout: "page"
 
 include: ['_pages']
 theme: minima

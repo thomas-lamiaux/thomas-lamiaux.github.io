@@ -1,23 +1,23 @@
 ---
 layout: default
-title: Publications
-permalink: /publications/
+title: Talks
+permalink: /talks/
 ---
 
 <h1 class="section"> Publications </h1>
 
 <!-- Sor them by inverse date -->
-{% assign sort_pub = site.publications | sort: "date" | "reverse" %}
+{% assign sort_pub = site.talks | sort: "date" | "reverse" %}
 
 <!-- Separate them by year  -->
-{%- for i in (2023..2023) reversed -%}
+{%- for i in (2022..2022) reversed -%}
   <div class="list-sep"> {{i}} </div>
 
   <!-- Print the good ones -->
   {%- for item in sort_pub -%}
     {%- assign year = item.date | date : "%Y" -%}
     <!-- TO FIX !!! -->
-    {%- if year == '2023' -%}
+    {%- if year == '2022' -%}
       <div class="box" style="--bot: 15px">
 
           <!-- print title -->
