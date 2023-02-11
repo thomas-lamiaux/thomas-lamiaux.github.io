@@ -4,66 +4,42 @@ title: News
 permalink: /news/
 ---
 
-<!-- recent news -->
-<h1 class="section"> News </h1>
-
+<!-- Sort the news in reverse order -->
 {% assign sort_news = site.news | sort: "date" | "reverse" %}
+<!-- Filter in recent and past news -->
+{%- assign recent_news = sort_news | where: "datebis.year", "2023" -%}
+{%- assign past_news = sort_news | where_exp: "item", "item.datebis.year < 2023" -%}
 
-{%- for item in sort_news -%}
-  <!-- only print recent -->
-  {%- assign year = item.date | date : "%Y" -%}
-  {%- assign month = item.date | date : "%m" -%}
-  {%- if year >= "2023" and month >= "01" -%}
+<!-- Recent News -->
+{%- if recent_news.size > 0 -%}
+  <h1 class="section"> Recent News </h1>
+  {%- for item in recent_news -%}
+    <!-- Print box -->
     <div class="box">
       <div class="box-title"> {{ item.title }} </div>
-
-      <!-- print venue and spec -->
-      <div class="box-data">
-        {%- if item.spec -%}
-            <div class="empty" style="--size: 5px";> try </div>
-            <span class="note-box"> {{ item.spec }} </span>
-        {%- endif -%}
-        <span class="box-data"> {{ item.category }}, {{ item.date | date: "%B, %Y"}} </span>
-        {%- if item.spec -%}
-          <div class="empty" style="--size: 7px";></div>
-        {%- endif -%}
-      </div>
-
-      <!-- print content -->
-      <div style="text-align: justify;"> {{ item.content | markdownify }} </div>
+      <div class="box-data"> {{item.category}}, {{ item.date | date: "%B, %Y"}} </div>
+      <div> {{item.content}} </div>
     </div>
-  {%- endif -%}
-{%- endfor -%}
-
-<!-- Past News -->
-<h1 class="section"> Past News </h1>
-
-{%- for item in sort_news -%}
-  <!-- print old -->
-  {%- assign year = item.date | date : "%Y" -%}
-  {%- assign month = item.date | date : "%m" -%}
-  {%- if year < "2023" or month < "01" -%}
-    <div class="box">
-
-      <!-- print title -->
-      <div class="box-title"> {{ item.title }} </div>
-
-      <!-- print venue and spec -->
-      <div class="box-data">
-        {%- if item.spec -%}
-            <div class="empty" style="--size: 5px";> try </div>
-            <span class="note-box"> {{ item.spec }} </span>
-        {%- endif -%}
-        <span class="box-data"> {{ item.category }}, {{ item.date | date: "%B, %Y"}} </span>
-        {%- if item.spec -%}
-          <div class="empty" style="--size: 7px";></div>
-        {%- endif -%}
-      </div>
-
-      <!-- print content -->
-      <div style="text-align: justify;"> {{ item.content | markdownify }} </div>
-    </div>
-  {%- endif -%}
-{%- endfor -%}
+  {%- endfor -%}
+{%- endif -%}
 
 
+<!-- Past news -->
+{%- if past_news.size > 0 -%}
+  <h1 class="section" style="--margin-top: 60px;"> Past News </h1>
+  <!-- Print by year -->
+  {%- for i in (2020..2025) reversed -%}
+    {%- assign year_news = sort_news | where_exp: "item", "item.datebis.year == i" -%}
+    {%- if year_news.size > 0 -%}
+      <div class="list-sep"> {{i}} </div>
+        <!-- Print News -->
+        {%- for item in year_news -%}
+          <div class="box">
+            <div class="box-title"> {{ item.title }} </div>
+            <div class="box-data"> {{item.category}}, {{ item.date | date: "%B, %Y"}} </div>
+            <div> {{item.content}} </div>
+          </div>
+        {%- endfor -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

@@ -2,7 +2,11 @@
 category: Paper
 title: Computing Cohomology Ring in Cubical Agda
 spec: Distinguished Paper
-date: 2023-01-10
+date: 2023-01-01
+datebis :
+  year: 2023
+  month: 01
+  day: 10
 ---
 
 Our paper [Computing Cohomology Rings in Cubical Agda](https://arxiv.org/abs/2212.04182)

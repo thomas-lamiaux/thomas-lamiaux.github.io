@@ -2,6 +2,10 @@
 category: New Position
 title: Research Internship with Nicolas Tabareau
 date: 2021-06-01
+datebis :
+  year: 2021
+  month: 06
+  day: 01
 ---
 
 For my last year of bachelor, I will do
