@@ -28,7 +28,7 @@ permalink: /publications/
         <div class="box-data">
             {%- for author in item.authors -%}
             {%- if author.link -%}
-              <a href="{{ author.link | relative_url }}">{{ author.name | escape }}, </a>
+              <span><a href="{{ author.link | relative_url }}">{{ author.name | escape }}</a>, </span>
             {%- else -%}
               <span>{{ author.name }}, </span>
             {%- endif -%}
@@ -37,7 +37,11 @@ permalink: /publications/
 
         <!-- print venue -->
         <div class="box-data">
-          <a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev | escape }}</a>
+          {%- if item.venue.link -%}
+            <a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev | escape }}</a>
+          {%- else -%}
+            {{item.venue.abrev}}
+          {%- endif -%}
         </div>
 
         <!-- print description -->

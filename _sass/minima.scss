@@ -14,7 +14,7 @@ $spacing-unit:     30px !default;
 
 $text-color:       white !default;
 $background-color: rgba(24, 26, 27, 0.95) !default;
-$box-background:   #51514d !default;
+$box-background:   rgb(81, 81, 77) !default;
 $line-color:       rgb(140, 130, 115) !default;
 $brand-color:      rgb(90, 209, 249) !default;
 
@@ -23,9 +23,9 @@ $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 5%) !default;
 
 // $header-background: #3083DC !default; // Bleu de France
-$header-background: #d58205 !default;
-$header-bottom: black !default;
-$sep-color: #8D0801 !default;
+$header-background: rgb(213, 130, 5) !default;
+$header-bottom: rgb(0, 0, 0) !default;
+$sep-color: rgb(141, 8, 1) !default;
 
 $table-text-align: left !default;
 

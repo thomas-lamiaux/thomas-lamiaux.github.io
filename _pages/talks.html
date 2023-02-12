@@ -4,58 +4,51 @@ title: Talks
 permalink: /talks/
 ---
 
-<h1 class="section"> Publications </h1>
+<h1 class="section"> Talks </h1>
 
 <!-- Sor them by inverse date -->
-{% assign sort_pub = site.talks | sort: "date" | "reverse" %}
+{% assign sort_talks = site.talks | sort: "date" | "reverse" %}
 
-<!-- Separate them by year  -->
-{%- for i in (2022..2022) reversed -%}
+<!-- Print them by year  -->
+{%- for i in (2020..2025) reversed -%}
+  {%- assign year_talks = sort_talks | where_exp: "item", "item.datebis.year == i" -%}
+  {%- if year_talks.size > 0 -%}
   <div class="list-sep"> {{i}} </div>
 
-  <!-- Print the good ones -->
-  {%- for item in sort_pub -%}
-    {%- assign year = item.date | date : "%Y" -%}
-    <!-- TO FIX !!! -->
-    {%- if year == '2022' -%}
+    <!-- Print Box -->
+    {%- for item in year_talks -%}
       <div class="box" style="--bot: 15px">
 
-          <!-- print title -->
-          <div class="box-title-article">
-            <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
-          </div>
+        <!-- print title -->
+        <div class="box-title-article">
+          <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+        </div>
 
-          <!-- print authors -->
-          {%- if item.authors.size > 0 -%}
-          <div class="box-data">
+        <!-- print authors -->
+        <div class="box-data">
             {%- for author in item.authors -%}
-              {%- if author.link -%}
-                <a href="{{ author.link | relative_url }}">{{ author.name | escape }} </a>
-              {%- else -%}
-                <span>{{ author.name }} </span>
-              {%- endif -%}
-            {%- endfor -%}
-          </div>
-          {%- endif -%}
-
-          <!-- print venue and spec -->
-          <div class="box-data">
-            {%- if item.spec -%}
-                <div class="empty" style="--size: 5px";> try </div>
-                <span class="note-box"> {{ item.spec }} </span>
+            {%- if author.link -%}
+              <span><a href="{{ author.link | relative_url }}">{{ author.name | escape }}</a>, </span>
+            {%- else -%}
+              <span>{{ author.name }}, </span>
             {%- endif -%}
-            <span><a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev | escape }}</a></span>
-            {%- if item.spec -%}
-              <div class="empty" style="--size: 7px";></div>
-            {%- endif -%}
-          </div>
+          {%- endfor -%}
+        </div>
 
-          <!-- print description -->
-          {%- if item.short-description -%}
-            <div style="text-align: justify;"> {{ item.short-description }} </div>
+        <!-- print venue -->
+        <div class="box-data">
+          {%- if item.venue.link -%}
+            <a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev | escape }}</a>
+          {%- else -%}
+            {{item.venue.abrev}}
           {%- endif -%}
+        </div>
+
+        <!-- print description -->
+        <div style="text-align: justify;"> {{ item.short-description }} </div>
 
       </div>
-    {%- endif -%}
-  {%- endfor -%}
+    {%- endfor -%}
+  {%- endif -%}
 {%- endfor -%}
+

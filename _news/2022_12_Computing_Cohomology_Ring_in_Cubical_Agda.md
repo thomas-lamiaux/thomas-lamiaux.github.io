@@ -1,12 +1,12 @@
 ---
-category: Paper
-title: Computing Cohomology Ring in Cubical Agda
+category: CPP23
+title: "Distinguished Paper at CPP23"
 spec: Distinguished Paper
-date: 2023-01-01
+date: 2022-12-15
 datebis :
-  year: 2023
-  month: 01
-  day: 10
+  year: 2022
+  month: 12
+  day: 15
 ---
 
 Our paper [Computing Cohomology Rings in Cubical Agda](https://arxiv.org/abs/2212.04182)

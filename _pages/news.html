@@ -19,9 +19,14 @@ permalink: /news/
         <!-- Print News -->
         {%- for item in year_news -%}
           <div class="box">
-            <div class="box-title"> {{ item.title }} </div>
-            <div class="box-data"> {{item.category}}, {{ item.date | date: "%B, %Y"}} </div>
-            <div> {{item.content}} </div>
+            <div>
+              <span class="box-title"> {{ item.title }} </span>
+              <span style="float:right; margin-top:7px;">
+                {{ item.date | date: "%B, %Y"}}
+              </span>
+            </div>
+            <div class="box-line"></div>
+            <div style="text-align: justify;"> {{item.content}} </div>
           </div>
         {%- endfor -%}
     {%- endif -%}

@@ -1,5 +1,5 @@
 ---
-category: New Position
+category:
 title: Research Internship with Benedikt Ahrens
 date: 2022-10-01
 datebis :

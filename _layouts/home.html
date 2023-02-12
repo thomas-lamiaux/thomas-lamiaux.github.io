@@ -14,33 +14,24 @@ layout: default
 
   <h1 class="section" style="--margin-top: 25px"> News </h1>
 
-  <!-- Print the recent news -->
-  {% assign sort_news = site.news | sort: "date" | "reverse" %}
-  {%- for item in sort_news -%}
-    {%- assign year = item.date | date : "%Y" -%}
-    {%- assign month = item.date | date : "%m" -%}
-    {%- if year >= "2023" and month >= "01" -%}
-      <div class="box">
+  <!-- Sort the news in reverse order -->
+  {%- assign sort_news = site.news | sort: "date" | "reverse" -%}
+  {%- assign recent_news = sort_news | where_exp: "item",
+    "item.datebis.year >= 2022 and item.datebis.month >= 08
+    or item.datebis.year >= 2023" -%}
 
-        <!-- print title -->
-        <div class="box-title"> {{ item.title }} </div>
-
-        <!-- print venue and spec -->
-        <div class="box-data">
-          {%- if item.spec -%}
-              <div class="empty" style="--size: 5px";> try </div>
-              <span class="note-box"> {{ item.spec }} </span>
-          {%- endif -%}
-          <span class="box-data"> {{ item.category }}, {{ item.date | date: "%B, %Y"}} </span>
-          {%- if item.spec -%}
-            <div class="empty" style="--size: 7px";></div>
-          {%- endif -%}
-        </div>
-
-        <!-- print text -->
-        <div style="text-align: justify;"> {{ item.content | markdownify }} </div>
-
+  <!-- Print News -->
+  {%- for item in recent_news -%}
+    <div class="box">
+      <div>
+        <span class="box-title"> {{ item.title }} </span>
+        <span style="float:right; margin-top:7px;">
+          {{ item.date | date: "%B, %Y"}}
+        </span>
       </div>
-    {%- endif -%}
+      <div class="box-line"></div>
+      <div style="text-align: justify;"> {{item.content}} </div>
+    </div>
   {%- endfor -%}
+
 </div>

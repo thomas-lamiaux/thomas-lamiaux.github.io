@@ -300,8 +300,8 @@ table {
 }
 
 .box-title{
-  @include relative-font-size(1.4);
-  font-weight: 500;
+  @include relative-font-size(1.5);
+  font-weight: 400;
 }
 
 .box-title-article{
@@ -332,7 +332,7 @@ table {
 .box-line{
   margin-top: 7px;
   border-bottom: 1px solid $text-color;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .box-title-pub{

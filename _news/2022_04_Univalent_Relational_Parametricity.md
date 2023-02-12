@@ -1,6 +1,6 @@
 ---
 category: Talk
-title: Univalent Relational Parametricity
+title: "Talk at Stockholm Logic Seminar"
 date: 2022-04-01
 datebis :
   year: 2022
