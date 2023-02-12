@@ -16,12 +16,11 @@ layout: default
 
   <!-- Sort the news in reverse order -->
   {%- assign sort_news = site.news | sort: "date" | "reverse" -%}
-  {%- assign recent_news = sort_news | where_exp: "item",
-    "item.datebis.year >= 2022 and item.datebis.month >= 08
-    or item.datebis.year >= 2023" -%}
 
   <!-- Print News -->
-  {%- for item in recent_news -%}
+  {%- for item in sort_news -%}
+    {%- if item.datebis.year >= 2022 and item.datebis.month >= 8
+          or item.datebis.year >= 2023 -%}
     <div class="box">
       <div>
         <span class="box-title"> {{ item.title }} </span>
@@ -32,6 +31,7 @@ layout: default
       <div class="box-line"></div>
       <div style="text-align: justify;"> {{item.content}} </div>
     </div>
+    {%- endif -%}
   {%- endfor -%}
 
 </div>

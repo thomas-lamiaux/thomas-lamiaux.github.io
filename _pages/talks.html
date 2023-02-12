@@ -11,7 +11,7 @@ permalink: /talks/
 
 <!-- Print them by year  -->
 {%- for i in (2020..2025) reversed -%}
-  {%- assign year_talks = sort_talks | where_exp: "item", "item.datebis.year == i" -%}
+  {%- assign year_talks = sort_talks | where: "datebis.year", i -%}
   {%- if year_talks.size > 0 -%}
   <div class="list-sep"> {{i}} </div>
 
@@ -21,14 +21,14 @@ permalink: /talks/
 
         <!-- print title -->
         <div class="box-title-article">
-          <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+          <a href="{{ item.url | relative_url }}">{{ item.title}}</a>
         </div>
 
         <!-- print authors -->
         <div class="box-data">
             {%- for author in item.authors -%}
             {%- if author.link -%}
-              <span><a href="{{ author.link | relative_url }}">{{ author.name | escape }}</a>, </span>
+              <span><a href="{{ author.link | relative_url }}">{{ author.name}}</a>, </span>
             {%- else -%}
               <span>{{ author.name }}, </span>
             {%- endif -%}
@@ -38,7 +38,7 @@ permalink: /talks/
         <!-- print venue -->
         <div class="box-data">
           {%- if item.venue.link -%}
-            <a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev | escape }}</a>
+            <a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev}}</a>
           {%- else -%}
             {{item.venue.abrev}}
           {%- endif -%}
