@@ -10,7 +10,7 @@ authors:
   - name: Thomas Lamiaux
     link: /
   - name: Axel Ljungström
-    link:
+    link: https://aljungstrom.github.io/
   - name: Anders Mörtberg
     link: https://staff.math.su.se/anders.mortberg/
 venue:
