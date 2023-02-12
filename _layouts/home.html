@@ -16,7 +16,9 @@ layout: default
 
   <!-- Sort the news in reverse order -->
   {%- assign sort_news = site.news | sort: "date" | "reverse" -%}
-  {%- assign recent_news = sort_news -%}
+  {%- assign recent_news = sort_news | where_exp: "item",
+    "item.datebis.year >= 2022 and item.datebis.month >= 08
+    or item.datebis.year >= 2023" -%}
 
   <!-- Print News -->
   {%- for item in recent_news -%}
