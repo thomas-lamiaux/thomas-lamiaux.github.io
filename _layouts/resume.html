@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<article>
+
+  <!-- print title section -->
+  <div class="section-pub">
+
+    <!-- print title -->
+    <div class="box-title-pub">
+      <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+    </div>
+
+    <div class="box-data">
+      <!-- institute -->
+      {%- if page.institute.link -%}
+        <span><a href="{{ page.institute.link | relative_url }}">{{ page.institute.name }}</a>, </span>
+      {%- else -%}
+        <span>{{ page.institute.name}}</span>
+      {%- endif -%}
+      <!-- team -->
+      {%- if page.team.link -%}
+        <span><a href="{{ page.team.link | relative_url }}">{{ page.team.name }}</a></span>
+      {%- else -%}
+        <span>{{ page.team.name}}</span>
+      {%- endif -%}
+    </div>
+
+    <div> {{ page.date | date: "%B, %Y"}} - {{ page.date2 | date: "%B, %Y"}} </div>
+
+  </div>
+
+  <!-- print abstract -->
+  <div style="text-align: justify;">{{ content | markdownify }}</div>
+
+</article>
