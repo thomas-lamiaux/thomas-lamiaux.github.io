@@ -1,7 +1,5 @@
 ---
-layout: resume
-title: Resume
-permalink: /resume/
+category: description
 ---
 
 I am a 3rd year student at [Ens Paris-Saclay](https://ens-paris-saclay.fr/en) in theoretical computer science.
