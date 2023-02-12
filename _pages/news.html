@@ -4,29 +4,13 @@ title: News
 permalink: /news/
 ---
 
+<h1 class="section"> News </h1>
+
 <!-- Sort the news in reverse order -->
 {% assign sort_news = site.news | sort: "date" | "reverse" %}
-<!-- Filter in recent and past news -->
-{%- assign recent_news = sort_news | where: "datebis.year", "2023" -%}
-{%- assign past_news = sort_news | where_exp: "item", "item.datebis.year < 2023" -%}
-
-<!-- Recent News -->
-{%- if recent_news.size > 0 -%}
-  <h1 class="section"> Recent News </h1>
-  {%- for item in recent_news -%}
-    <!-- Print box -->
-    <div class="box">
-      <div class="box-title"> {{ item.title }} </div>
-      <div class="box-data"> {{item.category}}, {{ item.date | date: "%B, %Y"}} </div>
-      <div> {{item.content}} </div>
-    </div>
-  {%- endfor -%}
-{%- endif -%}
-
 
 <!-- Past news -->
-{%- if past_news.size > 0 -%}
-  <h1 class="section" style="--margin-top: 60px;"> Past News </h1>
+{%- if sort_news.size > 0 -%}
   <!-- Print by year -->
   {%- for i in (2020..2025) reversed -%}
     {%- assign year_news = sort_news | where_exp: "item", "item.datebis.year == i" -%}

@@ -1,6 +1,10 @@
 ---
 title: Computing Cohomology Rings in Cubical Agda
 date: 2023-01-11
+datebis:
+  year: 2023
+  month: 01
+  day: 11
 spec: Distinguished Paper
 authors:
   - name: Thomas Lamiaux
