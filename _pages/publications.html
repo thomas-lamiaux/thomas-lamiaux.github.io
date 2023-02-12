@@ -20,13 +20,13 @@ permalink: /publications/
       <div class="box" style="--bot: 15px">
 
         <!-- print title -->
-        <div class="box-title-article">
-          <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+        <div class="box-title">
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
         </div>
 
         <!-- print authors -->
-        <div class="box-data">
-            {%- for author in item.authors -%}
+        <div>
+          {%- for author in item.authors -%}
             {%- if author.link -%}
               <span><a href="{{ author.link | relative_url }}">{{ author.name | escape }}</a>, </span>
             {%- else -%}
@@ -35,15 +35,19 @@ permalink: /publications/
           {%- endfor -%}
         </div>
 
-        <!-- print venue -->
-        <div class="box-data">
+        <!-- print spec + venue -->
+        <div>
           {%- if item.venue.link -%}
-            <a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev | escape }}</a>
+            <a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev }}</a>
           {%- else -%}
             {{item.venue.abrev}}
           {%- endif -%}
+          {%- if item.spec -%}
+            <span >, {{item.spec}} </span>
+          {%- endif -%}
         </div>
 
+        <div class="box-line"></div>
         <!-- print description -->
         <div style="text-align: justify;"> {{ item.short-description }} </div>
 

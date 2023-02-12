@@ -13,7 +13,8 @@ venue:
   name: Stockholm University, Logic Group Seminar
   abrev: Stockholm University, Logic Group Seminar
   link:
-file:
+files:
+  file:
 short-description:
   During this talk, we will first review the notion of parametricity and
   its application to automatic proof transport.

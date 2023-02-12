@@ -17,9 +17,10 @@ venue:
   name: Certified Programs and Proofs 2023
   abrev: CPP 2023
   link: https://popl23.sigplan.org/home/CPP-2023#
-arxiv: https://arxiv.org/abs/2212.04182
-doi: https://dl.acm.org/doi/10.1145/3573105.3575677
-file:
+files:
+  arxiv: https://arxiv.org/abs/2212.04182
+  doi: https://dl.acm.org/doi/10.1145/3573105.3575677
+  file:
 short-description:
   In the paper, we explain how to formalize Cohomology Rings in synthetic mathematics.
   With a special focus on data structures and how they influence formalization,

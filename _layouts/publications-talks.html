@@ -8,32 +8,27 @@ layout: default
   <div class="section-pub">
 
     <!-- print title -->
-    <div class="box-title-pub"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></div>
+    <div class="box-title-pub"><a href="{{ page.url | relative_url }}">{{ page.title }}</a></div>
 
-    <!-- print authors  -->
     <div class="box-data">
+      <!-- print authors  -->
       {%- if page.authors.size > 0 -%}
         {%- for author in page.authors -%}
           {%- if author.link -%}
-            <a href="{{ author.link | relative_url }}">{{ author.name | escape }} </a>
+            <a href="{{ author.link | relative_url }}">{{ author.name }}, </a>
           {%- else -%}
-            <span>{{ author.name }} </span>
+            <span>{{ author.name }}, </span>
           {%- endif -%}
         {%- endfor -%}
       {%- endif -%}
-    </div>
-
-    <!-- print venue -->
-    <div>
-      <a href="{{ page.venue.link | relative_url }}">{{ page.venue.name | escape }}</a>
+      <!-- print venue -->
+      <div><a href="{{ page.venue.link | relative_url }}">{{ page.venue.name }}</a></div>
     </div>
 
   </div>
 
   <!-- print abstract -->
   <h3> Abstract : </h3>
-  <div style="text-align: justify;">
-    {{ content | markdownify }}
-  </div>
+  <div style="text-align: justify;">{{ content | markdownify }}</div>
 
 </article>
