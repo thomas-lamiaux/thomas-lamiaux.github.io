@@ -1,7 +1,12 @@
 ---
 category: Research_Internship
 title: Research Internship with Nicolas Tabareau
-institute: Inria Nantes, Gallinette Team
+institute:
+  name: Inria Nantes
+  link: https://www.inria.fr/en
+team:
+  name: Gallinette Team
+  link: https://gallinette.gitlabpages.inria.fr/website/index.html
 date: 2021-06-01
 date2: 2021-08-01
 short-description:

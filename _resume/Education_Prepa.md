@@ -1,7 +1,12 @@
 ---
 category: Education
-title: Preparatory Classes to French National Competitive Exam
-institute: Lycee Camille Guerin, Poitiers
+title: Higher School Preparatory Classes
+institute:
+  name: Lycee Camille Guerin
+  link: https://lyc-camilleguerin.fr/
+team:
+  name: MPSI / MP*
+  link: https://prepas.org/?article=46
 date: 2017-09-01
 date2: 2020-07-01
 short-description:

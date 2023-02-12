@@ -1,7 +1,12 @@
 ---
 category: Research_Internship
 title: Research Internship with Anders Mörtberg
-institute: Stockholm University, MathComp Group
+institute:
+  name: Stockholm University
+  link: https://www.su.se/cmlink/stockholm-university
+team:
+  name: MathComp Group
+  link:
 date: 2022-03-01
 date2: 2022-09-01
 short-description:

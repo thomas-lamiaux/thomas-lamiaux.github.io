@@ -1,7 +1,12 @@
 ---
 category: Research_Internship
 title: Research Internship with Benedikt Ahrens
-institute: TU Delft, PL Group
+institute:
+  name: TU Delft
+  link: https://www.tudelft.nl/en/
+team:
+  name: PL Group
+  link: https://pl.ewi.tudelft.nl/
 date: 2022-10-01
 date2: 2023-07-15
 short-description:
