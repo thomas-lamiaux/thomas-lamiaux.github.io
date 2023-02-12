@@ -5,7 +5,7 @@ institute:
   name: TU Delft
   link: https://www.tudelft.nl/en/
 team:
-  name: PL Group
+  name: Programming Language Group
   link: https://pl.ewi.tudelft.nl/
 date: 2022-10-01
 date2: 2023-07-15
