@@ -13,7 +13,7 @@ permalink: /news/
 {%- if sort_news.size > 0 -%}
   <!-- Print by year -->
   {%- for i in (2020..2025) reversed -%}
-    {%- assign year_news = sort_news | where_exp: "item", "item.datebis.year == i" -%}
+    {%- assign year_news = sort_news  -%}
     {%- if year_news.size > 0 -%}
       <div class="list-sep"> {{i}} </div>
         <!-- Print News -->
