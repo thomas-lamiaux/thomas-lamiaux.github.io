@@ -8,8 +8,10 @@ layout: default
 
   <!-- Picture -->
   <img src="assets/images/profile-picture.JPG" style="width: 286px">
+  {% assign description = site.resume | where:"category", "description" | first -%}
   <div class="home-block">
-      {{ content }}
+    <h2> About </h2>
+    {{ description.content }}
   </div>
 
   <h1 class="section" style="--margin-top: 25px"> News </h1>

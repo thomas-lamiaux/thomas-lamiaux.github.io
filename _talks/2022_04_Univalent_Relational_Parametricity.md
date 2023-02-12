@@ -12,7 +12,7 @@ authors:
 venue:
   name: Stockholm University, Logic Group Seminar
   abrev: Stockholm University, Logic Group Seminar
-  link:
+  link: https://logic.math.su.se/seminar/
 files:
   file:
 short-description:
