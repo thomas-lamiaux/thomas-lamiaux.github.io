@@ -7,7 +7,7 @@ permalink: /talks/
 <h1 class="section"> Talks </h1>
 
 <!-- Sor them by inverse date -->
-{% assign sort_talks = site.talks | sort: "date" | "reverse" %}
+{% assign sort_talks = site.talks | sort: "date" | reverse %}
 
 <!-- Print them by year  -->
 {%- for i in (2020..2025) reversed -%}

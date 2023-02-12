@@ -7,7 +7,7 @@ permalink: /news/
 <h1 class="section"> News </h1>
 
 <!-- Sort the news in reverse order -->
-{% assign sort_news = site.news | sort: "date" | "reverse" %}
+{% assign sort_news = site.news | sort: "date" | reverse %}
 
 <!-- Past news -->
 {%- if sort_news.size > 0 -%}
