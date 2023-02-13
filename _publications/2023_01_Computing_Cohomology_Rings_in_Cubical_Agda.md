@@ -18,9 +18,11 @@ venue:
   abrev: CPP 2023
   link: https://popl23.sigplan.org/home/CPP-2023#
 files:
-  arxiv: https://arxiv.org/abs/2212.04182
   doi: https://dl.acm.org/doi/10.1145/3573105.3575677
-  file:
+  arxiv: https://arxiv.org/abs/2212.04182
+  paper-pdf: /assets/publications/2023_01_paper_cohomology_rings.pdf
+  slides-pdf: /assets/publications/2023_01_slides_cohomology_rings.pdf
+  video:
 short-description:
   In the paper, we explain how to formalize Cohomology Rings in synthetic mathematics.
   With a special focus on data structures and how they influence formalization,

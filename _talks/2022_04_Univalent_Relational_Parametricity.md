@@ -14,7 +14,8 @@ venue:
   abrev: Stockholm University, Logic Group Seminar
   link: https://logic.math.su.se/seminar/
 files:
-  file:
+  slides-pdf: /assets/talks/2022_04_slides_univalent_relational_parametricity.pdf
+  video:
 short-description:
   During this talk, we will first review the notion of parametricity and
   its application to automatic proof transport.

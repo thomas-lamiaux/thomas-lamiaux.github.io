@@ -19,9 +19,40 @@ permalink: /publications/
     {%- for item in year_pub -%}
       <div class="box" style="--bot: 15px">
 
+
+        <div>
         <!-- print title -->
-        <div class="box-title">
+        <span class="box-title">
           <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        </span>
+        <!-- print link files -->
+        <span style="margin-top: 5px; float: right;">
+          {%- if item.files.doi -%}
+            <a href="{{item.files.doi}}">
+              <span class="box-download"> Doi </span>
+            </a>
+          {%- endif -%}
+          {%- if item.files.arxiv -%}
+          <a href="{{item.files.arxiv}}">
+            <span class="box-download"> Arxiv </span>
+          </a>
+          {%- endif -%}
+          {%- if item.files.paper-pdf -%}
+            <a href="{{item.files.paper-pdf}}">
+              <span class="box-download"> Pdf </span>
+            </a>
+          {%- endif -%}
+          {%- if item.files.slides-pdf -%}
+            <a href="{{item.files.slides-pdf}}">
+              <span class="box-download">Slides</span>
+            </a>
+          {%- endif -%}
+          {%- if item.files.video -%}
+            <a href="{{item.files.video}}">
+              <span class="box-download"> Video </span>
+            </a>
+          {%- endif -%}
+          </span>
         </div>
 
         <!-- print authors -->
@@ -35,13 +66,14 @@ permalink: /publications/
           {%- endfor -%}
         </div>
 
-        <!-- print spec + venue -->
         <div>
+          <!-- print venue -->
           {%- if item.venue.link -%}
             <a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev }}</a>
           {%- else -%}
             {{item.venue.abrev}}
           {%- endif -%}
+          <!-- print spec -->
           {%- if item.spec -%}
             <span >, {{item.spec}} </span>
           {%- endif -%}
