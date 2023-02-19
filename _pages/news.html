@@ -9,7 +9,6 @@ permalink: /news/
 <!-- Sort the news in reverse order -->
 {% assign sort_news = site.news | sort: "date" | reverse %}
 
-<!-- Past news -->
 {%- if sort_news.size > 0 -%}
   <!-- Print by year -->
   {%- for i in (2020..2025) reversed -%}

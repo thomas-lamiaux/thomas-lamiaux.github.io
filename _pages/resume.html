@@ -17,9 +17,9 @@ permalink: /resume/
   <div class="box">
     <!-- title + date -->
     <div>
-      <span class="box-title">
-        <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
-      </span>
+      <span class="box-title"><a href="{{ item.url | relative_url }}">
+          {{ item.title | escape }}
+        </a></span>
       <span style="float:right; margin-top:7px;">
         {{ item.date | date: "%b, %y"}} - {{ item.date2 | date: "%b, %y"}}
       </span>
@@ -27,12 +27,16 @@ permalink: /resume/
     <!-- institute + group -->
     <div>
       {%- if item.institute.link -%}
-        <span><a href="{{ item.institute.link | relative_url }}">{{ item.institute.name }}</a>, </span>
+        <span><a href="{{ item.institute.link | relative_url }}">
+          {{ item.institute.name }}
+        </a>, </span>
       {%- else -%}
         <span>{{ item.institute.name}}</span>
       {%- endif -%}
       {%- if item.team.link -%}
-      <span><a href="{{ item.team.link | relative_url }}">{{ item.team.name }}</a></span>
+      <span><a href="{{ item.team.link | relative_url }}">
+        {{ item.team.name }}
+      </a></span>
     {%- else -%}
       <span>{{ item.team.name}}</span>
     {%- endif -%}
@@ -51,9 +55,9 @@ permalink: /resume/
   <div class="box">
     <!-- title + date -->
     <div>
-      <span class="box-title">
-        <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
-      </span>
+      <span class="box-title"><a href="{{ item.url | relative_url }}">
+          {{ item.title | escape }}
+        </a></span>
       <span style="float:right; margin-top:7px;">
         {{ item.date | date: "%b, %y"}} - {{ item.date2 | date: "%b, %y"}}
       </span>
@@ -61,18 +65,24 @@ permalink: /resume/
     <!-- institute + group -->
     <div>
       {%- if item.institute.link -%}
-        <span><a href="{{ item.institute.link | relative_url }}">{{ item.institute.name }}</a>, </span>
+        <span><a href="{{ item.institute.link | relative_url }}">
+          {{ item.institute.name }}
+        </a>, </span>
       {%- else -%}
         <span>{{ item.institute.name}}</span>
       {%- endif -%}
       {%- if item.team.link -%}
-      <span><a href="{{ item.team.link | relative_url }}">{{ item.team.name }}</a></span>
+      <span><a href="{{ item.team.link | relative_url }}">
+        {{ item.team.name }}
+      </a></span>
     {%- else -%}
       <span>{{ item.team.name}}</span>
     {%- endif -%}
     </div>
 
     <div class="box-line"></div>
-    <div style="text-align: justify;"> {{ item.short-description | markdownify }} </div>
+    <div style="text-align: justify;">
+      {{ item.short-description | markdownify }}
+    </div>
   </div>
 {%- endfor -%}
