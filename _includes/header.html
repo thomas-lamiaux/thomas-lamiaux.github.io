@@ -2,7 +2,9 @@
 
   <div class="wrapper">
     <!-- Get and print the site title  -->
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+      {{ site.title }}
+    </a>
 
     <!-- separation line -->
     <div class="site-line"></div>
@@ -15,7 +17,7 @@
               {% if page.url == item.link %}
                 style="font-weight: bold;"
               {%- endif -%}>
-              {{ item.name | escape }}
+              {{ item.name }}
             </a>
           {%- endfor -%}
       </nav>

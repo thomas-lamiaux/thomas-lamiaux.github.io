@@ -5,7 +5,7 @@
   {%- for author in local-var.authors -%}
     {%- if author.link -%}
       <span><a href="{{ author.link | relative_url }}">
-        {{ author.name | escape }}
+        {{ author.name }}
       </a>,</span>
     {%- else -%}
       <span>{{ author.name }},</span>
