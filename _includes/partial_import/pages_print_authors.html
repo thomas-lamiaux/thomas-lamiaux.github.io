@@ -1,0 +1,14 @@
+
+<!-- Print authors -->
+
+{%- if page.authors.size > 0 -%}
+  {%- for author in page.authors -%}
+    {%- if author.link -%}
+      <span><a href="{{ author.link | relative_url }}">
+        {{ author.name | escape }}
+      </a>,</span>
+    {%- else -%}
+      <span>{{ author.name }},</span>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
