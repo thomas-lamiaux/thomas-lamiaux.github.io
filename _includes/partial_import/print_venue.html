@@ -1,0 +1,20 @@
+
+<!-- Print venue -->
+{%- if abrev -%}
+  {%- assign venue-name = local-var.venue.abrev -%}
+{%- else -%}
+  {%- assign venue-name = local-var.venue.name -%}
+{%- endif -%}
+
+{%- if local-var.venue.link -%}
+  <a href="{{ local-var.venue.link | relative_url }}">
+    {{ venue-name }}
+  </a>
+{%- else -%}
+  {{ venue-name }}
+{%- endif -%}
+
+<!-- print spec -->
+{%- if local-var.spec -%}
+  <span >, {{local-var.spec}} </span>
+{%- endif -%}

@@ -14,9 +14,10 @@ permalink: /talks/
   {%- assign year_talks = sort_talks | where: "datebis.year", i -%}
   {%- if year_talks.size > 0 -%}
   <div class="list-sep"> {{i}} </div>
-
-    <!-- Print Box -->
     {%- for item in year_talks -%}
+
+      {%- assign local-var = item -%}
+      <!-- Print Box -->
       <div class="box" style="--bot: 15px">
 
         <div>
@@ -26,35 +27,19 @@ permalink: /talks/
           </span>
           <!-- print link files -->
           <span style="margin-top: 5px; float: right;">
-            {%- if item.files.slides-pdf -%}
-              <a href="{{item.files.slides-pdf}}">
-                <span class="box-download">Slides</span>
-              </a>
-            {%- endif -%}
-            {%- if item.files.video -%}
-              <a href="{{item.files.video}}">
-                <span class="box-download"> Video </span>
-              </a>
-            {%- endif -%}
+            {%- include partial_import/print_files.html -%}
           </span>
         </div>
 
-        <div>
-          <!-- print venue -->
-          {%- if item.venue.link -%}
-            <a href="{{ item.venue.link | relative_url }}">{{ item.venue.abrev }}</a>
-          {%- else -%}
-            {{item.venue.abrev}}
-          {%- endif -%}
-          <!-- print spec -->
-          {%- if item.spec -%}
-            <span >, {{item.spec}} </span>
-          {%- endif -%}
-        </div>
+        <!-- Print Venue + Spec -->
+        {%- assign abrev = true -%}
+        <div>{% include partial_import/print_venue.html -%}</div>
 
         <div class="box-line"></div>
         <!-- print description -->
-        <div style="text-align: justify;"> {{ item.short-description }} </div>
+        <div style="text-align: justify;">
+          {{ item.short-description }}
+        </div>
 
       </div>
     {%- endfor -%}

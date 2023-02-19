@@ -3,27 +3,32 @@ layout: default
 ---
 
 <article>
+  {%- assign local-var = page -%}
 
-  <!-- Print Title Section -->
+  <!-- ## Print Title Section -->
   <div class="section-pub">
+
     <!-- Print Title -->
     <div class="box-title-pub">
       <a href="{{ page.url | relative_url }}">
         {{ page.title }}
       </a>
     </div>
-    <!-- Print Data  -->
+
+    <!-- Print Authors + Venue  -->
     <div class="box-data">
-      {%- include partial_import/pages_print_authors.html -%}
-      {%- include partial_import/pages_print_venue.html -%}
+      <div>{%- include partial_import/print_authors.html -%}</div>
+      {%- assign abrev = false -%}
+      <div>{%- include partial_import/print_venue.html -%}</div>
     </div>
+
     <!-- Print Files Link -->
-    <div style="margin-top: 7px;">
-      {%- include partial_import/pages_print_files.html -%}
+    <div style="margin-top: 8px;">
+      {%- include partial_import/print_files.html -%}
     </div>
   </div>
 
-  <!-- Print Markdown Content -->
+  <!-- ## Print Markdown Content -->
   <h3> Abstract : </h3>
   <div style="text-align: justify;">{{ content | markdownify }}</div>
 

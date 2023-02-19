@@ -1,8 +1,8 @@
 
 <!-- Print authors -->
 
-{%- if page.authors.size > 0 -%}
-  {%- for author in page.authors -%}
+{%- if local-var.authors.size > 0 -%}
+  {%- for author in local-var.authors -%}
     {%- if author.link -%}
       <span><a href="{{ author.link | relative_url }}">
         {{ author.name | escape }}

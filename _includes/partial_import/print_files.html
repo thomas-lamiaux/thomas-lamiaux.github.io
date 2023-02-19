@@ -1,0 +1,30 @@
+
+<!-- Print files -->
+
+<span>
+  {%- if local-var.files.doi -%}
+  <a href="{{local-var.files.doi}}">
+    <span class="box-download"> Doi </span>
+  </a>
+  {%- endif -%}
+  {%- if local-var.files.arxiv -%}
+  <a href="{{local-var.files.arxiv}}">
+  <span class="box-download"> Arxiv </span>
+  </a>
+  {%- endif -%}
+  {%- if local-var.files.paper-pdf -%}
+  <a href="{{local-var.files.paper-pdf}}">
+    <span class="box-download"> Pdf </span>
+  </a>
+  {%- endif -%}
+  {%- if local-var.files.slides-pdf -%}
+  <a href="{{local-var.files.slides-pdf}}">
+    <span class="box-download"> Slides </span>
+  </a>
+  {%- endif -%}
+  {%- if local-var.files.video -%}
+  <a href="{{local-var.files.video}}">
+    <span class="box-download"> Video </span>
+  </a>
+  {%- endif -%}
+</span>
