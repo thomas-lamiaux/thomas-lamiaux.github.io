@@ -8,21 +8,40 @@ layout: default
   <div class="section-pub">
 
     <!-- print title -->
-    <div class="box-title-pub"><a href="{{ page.url | relative_url }}">{{ page.title }}</a></div>
+    <div class="box-title-pub">
+      <a href="{{ page.url | relative_url }}">
+        {{ page.title }}
+      </a>
+    </div>
 
     <div class="box-data">
       <!-- print authors  -->
       {%- if page.authors.size > 0 -%}
         {%- for author in page.authors -%}
           {%- if author.link -%}
-            <span><a href="{{ author.link | relative_url }}">{{ author.name | escape }}</a>, </span>
+            <span>
+              <a href="{{ author.link | relative_url }}">
+                {{ author.name | escape }}
+              </a>,
+            </span>
           {%- else -%}
             <span>{{ author.name }}, </span>
           {%- endif -%}
         {%- endfor -%}
       {%- endif -%}
+
       <!-- print venue -->
-      <div><a href="{{ page.venue.link | relative_url }}">{{ page.venue.name }}</a></div>
+      <div>
+        <a href="{{ page.venue.link | relative_url }}">
+          {{ page.venue.name }}
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Print files  -->
+    <div style="margin-top: 5px;">
+      {%- include partial_import/print_files.html -%}
     </div>
 
   </div>

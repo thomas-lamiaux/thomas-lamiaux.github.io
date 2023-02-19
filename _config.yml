@@ -29,6 +29,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  thomas-lamiaux
 
 # Build settings
+collections_dir: subpages
 collections:
   news:
   publications:

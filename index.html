@@ -17,7 +17,7 @@ layout: default
   <h1 class="section" style="--margin-top: 25px"> News </h1>
 
   <!-- Sort the news in reverse order -->
-  {%- assign sort_news = site.news | sort: "date" | "reverse" -%}
+  {%- assign sort_news = site.news | sort: "date" | reverse -%}
 
   <!-- Print News -->
   {%- for item in sort_news -%}
