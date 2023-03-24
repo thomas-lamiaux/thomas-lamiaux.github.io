@@ -22,7 +22,7 @@ files:
   arxiv: https://arxiv.org/abs/2212.04182
   paper-pdf: /assets/publications/2023_01_paper_cohomology_rings.pdf
   slides-pdf: /assets/publications/2023_01_slides_cohomology_rings.pdf
-  video:
+  video: https://www.youtube.com/watch?v=Rc3qDxyQNUM&list=PLyrlk8Xaylp6EB6XceHKB-UKBfmYYJAbH&index=17
 short-description:
   In the paper, we explain how to formalize Cohomology Rings in synthetic
   mathematics. With a special focus on data structures and how they

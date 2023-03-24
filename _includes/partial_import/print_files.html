@@ -17,6 +17,11 @@
     <span class="box-download"> Pdf </span>
   </a>
   {%- endif -%}
+  {%- if local-var.files.abstract-pdf -%}
+  <a href="{{local-var.files.abstract-pdf}}">
+    <span class="box-download"> Abstract </span>
+  </a>
+  {%- endif -%}
   {%- if local-var.files.slides-pdf -%}
   <a href="{{local-var.files.slides-pdf}}">
     <span class="box-download"> Slides </span>

@@ -1,6 +1,7 @@
 ---
-title: Introduction and comparison of different approaches to Initial Semantics
-date: 2022-03-20
+title: Introduction and comparison of different approaches to <br>
+       Initial Semantics
+date: 2023-03-20
 datebis:
   year: 2023
   month: 03
@@ -14,8 +15,7 @@ venue:
   abrev: Dutch Categories And Types Seminar
   link: https://dutchcats.github.io/
 files:
-  slides-pdf:
-  video:
+  slides-pdf: /assets/talks/2023_03_Slides_DutchCat.pdf
 short-description:
   I will give at talk at the workshop [DuctCat](https://dutchcats.github.io/)
   about entitled "Introduction and comparison of different approaches to

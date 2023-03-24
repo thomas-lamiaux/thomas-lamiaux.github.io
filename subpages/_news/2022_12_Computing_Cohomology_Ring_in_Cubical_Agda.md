@@ -10,10 +10,11 @@ datebis :
 ---
 
 Our paper [Computing Cohomology Rings in Cubical
-Agda](https://arxiv.org/abs/2212.04182) with Axel Ljungström and [Anders
+Agda](https://dl.acm.org/doi/10.1145/3573105.3575677) with Axel
+[Ljungström](https://aljungstrom.github.io/) and [Anders
 Mörtberg](https://staff.math.su.se/anders.mortberg/), was accepted at [CPP
-2023](https://popl23.sigplan.org/home/CPP-2023#) and awarded Distinguished
-Paper.
+2023](https://popl23.sigplan.org/home/CPP-2023#) and awarded **Distinguished
+Paper**.
 
 In the paper, we explain how to formalize Cohomology Rings in synthetic
 mathematics. With a special focus on data structures and how they influence
