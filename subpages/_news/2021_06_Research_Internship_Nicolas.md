@@ -1,5 +1,5 @@
 ---
-category:
+category: Work
 title: Research Internship with Nicolas Tabareau
 date: 2021-06-01
 datebis :

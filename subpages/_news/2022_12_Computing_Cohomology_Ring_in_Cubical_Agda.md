@@ -1,5 +1,5 @@
 ---
-category: CPP23
+category: Paper
 title: "Distinguished Paper at CPP23"
 spec: Distinguished Paper
 date: 2022-12-15

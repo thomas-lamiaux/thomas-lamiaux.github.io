@@ -1,5 +1,5 @@
 ---
-category:
+category: Work
 title: Research Internship with Anders Mörtberg
 date: 2022-03-01
 datebis :

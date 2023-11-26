@@ -21,18 +21,30 @@ layout: default
 
   <!-- Print News -->
   {%- for item in sort_news -%}
-    {%- if item.datebis.year >= 2022 and item.datebis.month >= 8
-          or item.datebis.year >= 2023 -%}
-    <div class="box">
-      <div>
-        <span class="box-title"> {{ item.title }} </span>
-        <span style="float:right; margin-top:7px;">
-          {{ item.date | date: "%B, %Y"}}
-        </span>
+    {%- if item.datebis.year >= 2023 and item.datebis.month >= 06
+          or item.datebis.year >= 2024                            -%}
+      <div class="box">
+        <div>
+          <span class="box-title"> {{ item.title }} </span>
+          <span style="float:right; margin-top:7px;">
+            {{ item.date | date: "%B, %Y"}}
+          </span>
+        </div>
+        <div class="box-line"></div>
+        <div style="text-align: justify;"> {{item.content}} </div>
       </div>
-      <div class="box-line"></div>
-      <div style="text-align: justify;"> {{item.content}} </div>
-    </div>
+    {%- endif -%}
+    {%- if item.category == 'Paper' and item.datebis.year >= 2022 -%}
+      <div class="box">
+        <div>
+          <span class="box-title"> {{ item.title }} </span>
+          <span style="float:right; margin-top:7px;">
+            {{ item.date | date: "%B, %Y"}}
+          </span>
+        </div>
+        <div class="box-line"></div>
+        <div style="text-align: justify;"> {{item.content}} </div>
+      </div>
     {%- endif -%}
   {%- endfor -%}
 
