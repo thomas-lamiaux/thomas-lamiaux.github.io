@@ -1,7 +1,7 @@
 ---
 category: Talk
 title: "Talk at Stockholm Logic Seminar"
-date: 2023-31-01
+date: 2023-05-31
 datebis :
   year: 2023
   month: 05

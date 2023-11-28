@@ -11,4 +11,4 @@ datebis :
 I will be starting my master 2 research internship in march 2024, under the
 supervision of [Nicolas Tabareau](https://tabareau.fr/).
 We will investigate the generation of induction principles for
-nested inductive types.
+nested inductive types in Coq.
