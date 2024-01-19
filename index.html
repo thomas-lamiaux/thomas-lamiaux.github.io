@@ -21,8 +21,9 @@ layout: default
 
   <!-- Print News -->
   {%- for item in sort_news -%}
-    {%- if item.datebis.year >= 2023 and item.datebis.month >= 08
-          or item.datebis.year >= 2024                            -%}
+    {%- if item.category != 'Paper' and item.datebis.year >= 2024 -%}
+          <!-- if item.datebis.year >= 2023 and item.datebis.month >= 08
+          or item.datebis.year >= 2024                            -%} -->
       <div class="box">
         <div>
           <span class="box-title"> {{ item.title }} </span>
