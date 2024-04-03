@@ -10,7 +10,6 @@ layout: default
   <img src="assets/images/profile-picture.JPG" style="width: 286px">
   {% assign description = site.resume | where:"category", "description" | first -%}
   <div class="home-block">
-    <h2> About </h2>
     {{ description.content }}
   </div>
 
