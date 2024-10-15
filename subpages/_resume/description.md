@@ -5,7 +5,7 @@ category: description
 I am a 1st year phd student in the [Gallinette team](https://gallinette.gitlabpages.inria.fr/website/)
 at [Inria](https://www.inria.fr/en) & [Nantes University](https://english.univ-nantes.fr/),
 under the direction of [Nicolas Tabareau](https://tabareau.fr/), [Yannick Forster](https://yforster.de/),
-and [Matthieu Sozeau](https://sozeau.gitlabpages.inria.fr/www/).
+and [Matthieu Sozeau](https://sozeau.gitlabpages.inria.fr/www/). <br>
 I am working on Proof Assistant, most particularly on generating recursors for
 inductive types using MetaCoq, and towards formalising Coq's guard condition.
 
