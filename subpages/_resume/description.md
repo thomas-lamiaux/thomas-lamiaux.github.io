@@ -2,13 +2,18 @@
 category: description
 ---
 
-I am a 4th year student at [Ens Paris-Saclay](https://ens-paris-saclay.fr/en)
-in theoretical computer science.
-I am mostly interested in proof assistants, type theory, and other related notions.
+I am a 1st year phd student in the [Gallinette team](https://gallinette.gitlabpages.inria.fr/website/)
+at [Inria](https://www.inria.fr/en) & [Nantes University](https://english.univ-nantes.fr/),
+under the direction of [Nicolas Tabareau](https://tabareau.fr/), [Yannick Forster](https://yforster.de/),
+and [Matthieu Sozeau](https://sozeau.gitlabpages.inria.fr/www/).
+I am working on Proof Assistant, most particularly on generating recursors for
+inductive types using MetaCoq, and towards formalising Coq's guard condition.
 
-I am currently working on :
-- Generating recursors for inductive types for Coq using MetaCoq, and on
-  verifying Coq's guard condition with [Nicolas Tabareau](https://tabareau.fr/)
+On the side of my phd, I am pushing forward the project
+[Coq Platform Docs](https://github.com/coq/platform-docs)
+aiming at documenting Coq and its Platform.
+
+I am also working on some other projects linked to initial semantics  :
 - Leveraging the parametricity of initial semantics framework in the input
   monoidal category with [Ambroise Lafont](https://amblafont.github.io/)
 - Reformulating and extending some notions of initial semantics to polymorphic
@@ -18,15 +23,3 @@ I am currently working on :
 
 
 
-<!-- I am a 4th year student at [Ens Paris-Saclay](https://ens-paris-saclay.fr/en)
-in theoretical computer science.
-I am currently working with [Benedikt Ahrens](https://benediktahrens.gitlab.io/)
-on a unified framework for initial semantics, and with
-[Ambroise Lafont](https://amblafont.github.io/) on leveraging the parametricity
-of such frameworks in the input category.
-
-My main interests are :
-- Type Theory
-- Proof Assistants
-- Functional Programming Languages
-- Categorical Semantics -->
