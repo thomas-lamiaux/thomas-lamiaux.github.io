@@ -6,9 +6,10 @@ permalink: /contact/
 
 <h1 class="section"> Contact </h1>
 
-I am contactable at the email below:
+You can join me by mail at:
 
-- **Email** : firstname.lastname@ens-paris-saclay.fr
+- **Email 1** : firstname.lastname@etu.univ-nantes.fr
+- **Email 2** : firstname.lastname@inria.fr
 
 Other media:
 
